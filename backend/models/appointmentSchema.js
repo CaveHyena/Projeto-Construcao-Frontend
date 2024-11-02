@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import validator from "validator";
 
 const appointmentSchema = new mongoose.Schema({
   firstName: {
@@ -23,9 +24,13 @@ const appointmentSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    required: true,
-    minLength: [9, "Número de telefone deve estar no formato (XX) XXXXX-XXXX"],
-    maxLength: [9, "Número de telefone deve estar no formato (XX) XXXXX-XXXX"],
+    required: [true, "Telefone é obrigatório."],
+    validate: {
+      validator: function(v) {
+        return validator.isMobilePhone(v, 'pt-BR', { strictMode: false });
+      },
+      message: "Número de telefone deve estar no formato (XX) XXXXX-XXXX"
+    }
   },
   time: {
     type: String,
