@@ -24,12 +24,12 @@ const appointmentSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    required: [true, "Telefone é obrigatório."],
+    required: [true, "Número de celular é obrigatório."],
     validate: {
       validator: function(v) {
         return validator.isMobilePhone(v, 'pt-BR', { strictMode: false });
       },
-      message: "Número de telefone deve estar no formato (XX) XXXXX-XXXX"
+      message: "Número de celular deve estar no formato (XX) 91234-5678"
     }
   },
   time: {
