@@ -8,4 +8,5 @@ PORT = 4000
 FRONTEND_URL = [link do seu localhost]
 
 MONGO_URI = [atlas, com o perfil e senha]
+
 5. Abrir terminal integrado tanto do "backend" quanto do "frontend" e digitar "npm i"  e "npm install --save-dev nodemon"
