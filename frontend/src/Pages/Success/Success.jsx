@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 const Success = () => {
-  const [countdown, setCountdown] = useState(10);
+  const [countdown, setCountdown] = useState(20);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,10 +22,11 @@ const Success = () => {
     <>
       <section className="notFound">
         <div className="container">
-          <img src="/sandwich.png" alt="success" />
-          <h1>Redirecting to Home in {countdown} seconds...</h1>
+          <img src="/success.png" alt="success" />
+          <h1>ENCONTRO MARCADO!</h1>
+          <p>Redirecionando para Home em {countdown} segundos...</p>
           <Link to={"/"}>
-            Back to Home <HiOutlineArrowNarrowRight />
+            Voltar para Home <HiOutlineArrowNarrowRight />
           </Link>
         </div>
       </section>

@@ -9,17 +9,11 @@ const About = () => {
         <div className="container">
           <div className="banner">
             <div className="top">
-              <h1 className="heading">ABOUT US</h1>
-              <p>The only thing we're serious about is food.</p>
+              <h1 className="heading">SOBRE NÓS</h1>
+              <p>Todos gatos são de rua, em sua maioria já adultos, e muitos ainda se acostumando à convivência com pessoas.</p>
             </div>
             <p className="mid">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Provident possimus optio adipisci dolores impedit illum iusto
-              perferendis, laudantium quod accusamus consequuntur consectetur,
-              tempore nulla error iure reiciendis dolorem assumenda.
-              Necessitatibus fugit asperiores totam rem esse exercitationem
-              iusto ipsum qui dolore ex, accusantium repellat mollitia
-              repellendus.
+            Sem a intenção inicial de nos tornarmos um "abrigo informal de animais", nossa casa foi se enchendo de novos moradores — fossem gatos que acolhíamos após encontrá-los abandonados na rua, ou aqueles que acabavam sendo deixados dentro do nosso muro. Cuidar de tantos animais tem sido um desafio, e, com as despesas cada vez mais altas, decidimos criar este site na esperança de atrair pessoas interessadas em adotar um de nossos bichanos. Mais do que aliviar um pouco nosso fardo, queremos que cada um desses gatos encontre alguém que possa dar a atenção que eles merecem.
             </p>
             <Link to={"/"}>
               Explore Menu{" "}

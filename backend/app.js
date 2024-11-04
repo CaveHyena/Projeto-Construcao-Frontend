@@ -5,8 +5,9 @@ import { errorMiddleware } from "./middlewares/error.js";
 import appointmentRouter from "./routes/appointmentRoute.js";
 import { dbConnection } from "./database/dbConnection.js";
 
-const app = express();
-dotenv.config({ path: "./config/config.env" });
+const app = express(); // Instância do aplicativo Express, para iniciar e configurar o servidor
+
+dotenv.config({ path: "./config/config.env" }); // Carrega variáveis de ambiente do arquivo .env para process.env
 
 app.use(
   cors({
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/appointment", appointmentRouter);
+
 app.get("/", (req, res, next)=>{return res.status(200).json({
   success: true,
   message: "HELLO WORLD AGAIN"
