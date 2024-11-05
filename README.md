@@ -6,8 +6,8 @@ Para funcionar você tem que:
 
 PORT = 4000
 
-FRONTEND_URL = [link do seu localhost]
+FRONTEND_URL = link do localhost
 
-MONGO_URI = [atlas, com o perfil e senha]
+MONGO_URI = mongodb+srv://<db_user>:<db_password>@cluster0.pxevp.mongodb.net/?retryWrites=true
 
 5. Abrir terminal integrado tanto do "backend" quanto do "frontend" e digitar "npm i"  e "npm install --save-dev nodemon"
