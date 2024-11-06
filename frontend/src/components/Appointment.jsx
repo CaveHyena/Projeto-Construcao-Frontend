@@ -11,6 +11,7 @@ import "react-phone-number-input/style.css";
 const Appointment = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [phone, setPhone] = useState("");
@@ -21,7 +22,7 @@ const Appointment = () => {
     try {
       const { data } = await axios.post(
         "http://localhost:4000/api/v1/appointment/send",
-        { firstName, lastName, phone, date, time },
+        { firstName, lastName, email, phone, date, time },
         {
           headers: {
             "Content-Type": "application/json",
@@ -32,7 +33,8 @@ const Appointment = () => {
       toast.success(data.message); 
       setFirstName("");
       setLastName("");
-      setPhone("");
+      setPhone(0);
+      setEmail("");
       setTime("");
       setDate("");
       navigate("/success");
@@ -46,14 +48,14 @@ const Appointment = () => {
   };
 
   return (
-    <section className="appointment" id="appointment">
+    <section className="appointment">
       <div className="container">
         <div className="banner">
-          <img src="/form.png" alt="res" />
+          <img className="cat" src="/form.png" alt="res" />
         </div>
-        <div className="banner">
+        <div className="banner" id="appointment">
           <div className="appointment_form_box">
-            <h1>MARQUE UM HORÁRIO</h1>
+            <h1>MARQUE UMA VISITA</h1>
             <p>
               Ou se preferir, nos chame pelo <a href="https://wa.me/55982566294?text=Olá!%20Gostaria%20de%20saber%20mais%20informações." target="_blank">
   WhatsApp. <FaWhatsapp />
@@ -90,6 +92,13 @@ const Appointment = () => {
                 />
               </div>
               <div>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="email_tag"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
                 <PhoneInput
                   placeholder="N° de celular"
                   value={phone}

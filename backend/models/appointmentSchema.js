@@ -22,6 +22,11 @@ const appointmentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  email: {
+    type: String,
+    required: true,
+    validate: [validator.isEmail, "Forneça um e-mail válido"],
+  },
   phone: {
     type: String,
     required: [true, "Número de celular é obrigatório."],
@@ -31,15 +36,7 @@ const appointmentSchema = new mongoose.Schema({
       },
       message: "Número de celular deve estar no formato (XX) 91234-5678"
     }
-  },
-  time: {
-    type: String,
-    required: true
-  },
-  date: {
-    type: String,
-    required: true
-  },
+  }
 });
 
 export const Appointment = mongoose.model("Appointment", appointmentSchema);

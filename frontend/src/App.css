@@ -17,13 +17,15 @@ nav {
   display: flex;
   max-width: 1500px;
   min-width: 1500px;
+  height: 50px;
   padding: 25px 10px 40px 10px;
-  margin-bottom: 25px;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
   align-items: center;
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
+  background: #ffffff25;
+  transition: 3s;
 }
 nav::after {
   content: "";
@@ -64,25 +66,16 @@ nav .navLinks .links a:hover {
   transition: 0.3s;
   cursor: pointer;
 }
-nav .menuBtn {
-  padding: 8px 20px;
-  color: black;
-  background: transparent;
-  border: 1px solid #333;
-  border-radius: 20px;
-  font-size: 16px;
-}
-nav .menuBtn:hover {
-  color: #fff;
-  background: #222;
-  transition: 0.3s;
-  cursor: pointer;
-}
 nav .hamburger {
   display: none;
 }
 nav svg {
   font-size: 1.75rem;
+}
+nav.sticky {
+  background-color: #111111;
+  color: #fff;
+  transition: 3s;
 }
 @media (max-width: 1520px) {
   nav {
@@ -93,9 +86,10 @@ nav svg {
 @media (max-width: 1100px) {
   nav {
     z-index: 20;
-    position: unset;
-    background: #ffffff63;
-    padding: 10px 30px;
+    position: fixed;
+    padding: 5px 30px;
+    overflow: visible;
+    z-index: 2;
   }
   nav::after {
     content: "";
@@ -108,48 +102,34 @@ nav svg {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: -100%;
-    background: #fff;
+    top: -650%;
+    background: #111111;
     width: 100%;
+    right: 0;
     left: 0;
     padding: 15px 7.5px;
     z-index: -1;
-    transition: 0.3s;
+    transition: 0.5s;
   }
   nav .showmenu {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 67px;
-    background: #fff;
-    width: 100%;
+    top: 50px;
+    background: #fffcfc;
+    right: 0;
     left: 0;
     padding: 15px 7.5px;
-    transition: 0.3s;
-    margin: 0 15px;
-    width: 96.7vw;
-    margin-right: 30px;
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
+    transition: 0.5s;
+    width: 100%;
+    z-index: 1;
   }
-  nav .showmenu .links {
+  nav .showmenu .links, nav .navLinks .links {
     flex-direction: column;
     text-align: center;
   }
-  nav .menuBtn {
-    margin-top: 20px;
-  }
-}
-@media (max-width: 800px) {
-  nav .showmenu {
-    width: 96vw;
-  }
-}
-@media (max-width: 650px) {
-  nav .showmenu {
-    margin: 0;
-    width: 100%;
-    border-radius: 0;
+  nav .logo {
+    font-size: 1.5rem;
   }
 }
 /**********************************************************************************************************************/
@@ -172,6 +152,7 @@ nav svg {
   display: flex;
   max-width: 1200px;
   min-width: 1200px;
+  margin-top: 100px;
 }
 .heroSection .container .banner:first-child {
   flex: 2;
@@ -375,6 +356,7 @@ nav svg {
   text-decoration: none;
   font-size: 15px;
   color: #111;
+  margin-top: 20px;
 }
 .about .container .banner a span {
   margin-left: 1rem;
@@ -406,7 +388,7 @@ nav svg {
   }
   .about .container .banner .mid {
     width: 100%;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
   }
 }
 @media (max-width: 786px) {
@@ -416,7 +398,6 @@ nav svg {
   .about .container .banner img {
     width: 400px;
     margin: 0 auto;
-    margin-bottom: 40px;
   }
   .about .container .banner:first-child {
     padding: 0;
@@ -870,6 +851,7 @@ footer .container .banner .right {
 .appointment .container .banner {
   width: 50%;
   padding: 50px;
+  margin: auto;
 }
 .appointment .container .banner .appointment_form_box {
   width: 400px;
@@ -893,6 +875,9 @@ footer .container .banner .right {
   border: none;
   border-bottom: 1px solid #333;
   background: transparent;
+  width: 48%;
+  min-width: 45%;
+  cursor: pointer;
 }
 .appointment
   .container
@@ -901,7 +886,7 @@ footer .container .banner .right {
   form
   input[type="email"] {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 27px;
   padding: 5px;
   font-size: 16px;
   font-weight: 300;
@@ -909,28 +894,18 @@ footer .container .banner .right {
   border-bottom: 1px solid #555;
   background: transparent;
 }
-.appointment
-  .container
-  .banner
-  .appointment_form_box
-  form
-  input[type="number"] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 5px;
-  font-size: 16px;
-  font-weight: 300;
-  border: none;
-  border-bottom: 1px solid #333;
-  background: transparent;
-}
+
 .appointment .container .banner .appointment_form_box form div input:focus,
 .appointment
   .container
   .banner
   .appointment_form_box
   form
-  input[type="number"]:focus,
+  input[type="email"]:focus {
+  outline: none;
+  border-bottom: 2px solid skyblue;
+}
+
 .appointment
   .container
   .banner
@@ -958,7 +933,27 @@ footer .container .banner .right {
   justify-content: center;
 }
 .appointment .container .banner img {
-  width: 550px;
+  width: 500px;
+}
+.PhoneInput {
+  padding:  0 5px !important;
+  margin-bottom: 27px !important;
+  position: relative;
+  overflow: visible !important;
+}
+.PhoneInputCountry {
+  gap: 0 !important;
+  position: absolute;
+  margin: 0 !important;
+  height: fit-content;
+  top: 37px;
+  right: 1px;
+}
+.PhoneInputCountrySelect {
+  height: min-content;
+}
+.PhoneInputCountryIcon.PhoneInputCountryIcon--border {
+  margin-bottom: 0 !important;
 }
 .appointment .container .banner .appointment_form_box form button {
   border: 1px solid black;
@@ -974,6 +969,17 @@ footer .container .banner .right {
   color: #111;
   background: transparent;
   margin-top: 30px;
+  cursor: pointer;
+}
+.appointment .container .banner .appointment_form_box form button:hover {
+  color: #fff;
+  background: #111;
+  transition: ease-in-out 0.3s;
+}
+.appointment .container .banner .appointment_form_box form button:hover  span{
+  background: #fff;
+  color: #111;
+  transition: ease-in-out 0.5s;
 }
 .appointment .container .banner .appointment_form_box form button span {
   margin-left: 1rem;
@@ -1000,22 +1006,20 @@ footer .container .banner .right {
 @media (max-width: 885px) {
   .appointment .container {
     flex-direction: column;
-    gap: 30px;
   }
-  .appointment .container .banner img {
-    width: 70vw;
+  .appointment .container .banner .cat {
+    width: 40vw;
+    clip-path: inset(0 0 10px 0);
+    margin-bottom: -95px;
   }
   .appointment .container .banner {
     width: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
   }
 }
-@media (max-width: 660px) {
-  .appointment .container .banner img {
-    width: 100%;
-  }
-}
+
 @media (max-width: 450px) {
   .appointment .container .banner .appointment_form_box {
     width: 100%;
@@ -1048,9 +1052,8 @@ footer .container .banner .right {
   text-align: center;
 }
 .notFound .container img {
-  margin-bottom: 0.5px;
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
 }
 .notFound .container h1 {
   font-size: 2.75rem;

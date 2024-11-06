@@ -3,13 +3,13 @@ import { Appointment } from "../models/appointmentSchema.js";
 
 
 const sendAppointment = async (req, res, next) => {
-  const { firstName, lastName, date, time, phone } = req.body; // Desestruturação, extraindo firsName, lastName, ... do corpo da requisição
-  if (!firstName || !lastName || !date || !time || !phone) {
+  const { firstName, lastName, email, date, time, phone } = req.body; // Desestruturação, extraindo firsName, lastName, ... do corpo da requisição
+  if (!firstName || !lastName || !email || !date || !time || !phone) {
     return next(new ErrorHandler("Por favor preencha todo o formulário de agendamento!", 400));
   }
 
   try {
-    await Appointment.create({ firstName, lastName, date, time, phone });
+    await Appointment.create({ firstName, lastName, email, date, time, phone });
     res.status(201).json({
       success: true,
       message: "Agendamento marcado com sucesso!",

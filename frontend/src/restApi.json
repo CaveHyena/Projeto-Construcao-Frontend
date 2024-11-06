@@ -149,7 +149,7 @@
             },
             {
                 "id": 2,
-                "title": "ABOUT US",
+                "title": "SOBRE NÓS",
                 "link": "about"
             },
             {
@@ -163,9 +163,9 @@
                 "link": "team"
             },
             {
-                "id": 5,
-                "title": "RESERVATION",
-                "link": "reservation"
+              "id": 5,
+              "title": "MARQUE UMA VISITA",
+              "link": "appointment"
             }
         ]
     
