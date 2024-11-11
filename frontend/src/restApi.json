@@ -3,24 +3,24 @@
         {"ourQualities" : [
             {
                 "id": 1,
-                "image": "./quality_food.svg",
-                "title": "QUALITY FOOD",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus officia qui repellat." 
+                "image": "./Gato_saude.svg",
+                "title": "SAUDÁVEIS",
+                "description": "Esses gatinhos estão em excelente estado de saúde, recebendo todos os cuidados necessários para garantir uma vida longa e feliz." 
             },
             {
                 "id": 2,
-                "image": "./super_taste.svg",
-                "title": "SUPER TASTE",
-                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing sit amet elit. Sit voluptates quaerat pariatur." 
+                "image": "./Cat_Energy.svg",
+                "title": "ANIMADOS",
+                "description": "Esses gatinhos são cheios de energia e um pouco travessos! Estão sempre em movimento, prontos para explorar cada cantinho, e podem ser um pouco independentes." 
             },
             {
                 "id": 3,
-                "image": "./fast_delivery.svg",
-                "title": "FAST DELIVERY",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus officia qui repellat." 
+                "image": "./Cat_Castrated.svg",
+                "title": "CASTRADOS",
+                "description": "Grande parte dos nossos gatos são castrados, contribuindo para o controle populacional e para a evitar comportamentos indesejados." 
             }
         ],
-        "dishes": [
+        "gatos": [
             {
                 "id": 1,
                 "image": "./dinner1.jpeg",

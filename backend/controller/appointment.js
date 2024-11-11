@@ -11,7 +11,7 @@ const sendAppointment = async (req, res, next) => {
   try {
     await Appointment.create({ firstName, lastName, email, date, time, phone });
     res.status(201).json({
-      success: true,
+      sucesso: true,
       message: "Agendamento marcado com sucesso!",
     });
   } catch (error) {

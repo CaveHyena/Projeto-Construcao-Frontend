@@ -2,16 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
-const NotFound = () => {
+const PaginaNaoEncontrada = () => {
   return (
     <>
-      <section className="notFound">
+      <section className="PaginaNaoEncontrada">
         <div className="container">
-          <img src="/notFound.svg" alt="notFound" />
-          <h1>LOOKS LIKE YOU'RE LOST</h1>
-          <p>We can't seem to find you the page you're looking for</p>
+          <img src="/PaginaNaoEncontrada.svg" alt="PaginaNaoEncontrada" />
+          <h1>PÁGINA NÃO ENCONTRADA :/</h1>
+          <p>Oops! Esta página não pode ser encontrada!</p>
           <Link to={"/"}>
-            Back to Home{" "}
+            Retornar ao Menu{" "}
             <span>
               <HiOutlineArrowNarrowRight />
             </span>
@@ -22,4 +22,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default PaginaNaoEncontrada;

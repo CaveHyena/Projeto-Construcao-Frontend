@@ -23,7 +23,7 @@ const About = () => {
               queremos que cada um desses gatos encontre alguém que possa dar a devida atenção que eles merecem.
             </p>
             <Link to={"/"}>
-              Explore Menu{" "}
+              Explore Gatos{" "}
               <span>
                 <HiOutlineArrowRight />
               </span>

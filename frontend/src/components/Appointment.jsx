@@ -30,14 +30,14 @@ const Appointment = () => {
           withCredentials: true,
         }
       );
-      toast.success(data.message); 
+      toast.sucesso(data.message); 
       setFirstName("");
       setLastName("");
       setPhone(0);
       setEmail("");
       setTime("");
       setDate("");
-      navigate("/success");
+      navigate("/sucesso");
     } catch (error) {
       if (error.response) {
         toast.error(error.response.data.message);
