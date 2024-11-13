@@ -4,7 +4,7 @@ import About from '../../components/About'
 import Qualities from '../../components/Qualities'
 import Gatos from '../../components/Gatos'
 import WhoAreWe from '../../components/WhoAreWe'
-import Team from '../../components/Team'
+import Time from '../../components/Time'
 import Appointment from '../../components/Appointment'
 import Footer from '../../components/Footer'
 
@@ -16,7 +16,7 @@ const Menu = () => {
       <Qualities/>
       <Gatos/>
       <WhoAreWe/>
-      <Team/>
+      <Time/>
       <Appointment/>
       <Footer/>
     </>
