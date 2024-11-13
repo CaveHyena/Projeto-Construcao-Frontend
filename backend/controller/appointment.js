@@ -3,7 +3,7 @@ import { Appointment } from "../models/appointmentSchema.js";
 
 
 const sendAppointment = async (req, res, next) => {
-  const { firstName, lastName, email, date, time, phone } = req.body; // Desestruturação, extraindo firsName, lastName, ... do corpo da requisição
+  const { firstName, lastName, email, date, time, phone } = req.body; 
   if (!firstName || !lastName || !email || !date || !time || !phone) {
     return next(new ErrorHandler("Por favor preencha todo o formulário de agendamento!", 400));
   }
