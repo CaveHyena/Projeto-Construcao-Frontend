@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1/appointment", appointmentRouter);
 
 app.get("/", (req, res, next)=>{return res.status(200).json({
-  success: true,
+  sucesso: true,
   message: "HELLO WORLD AGAIN"
 })})
 

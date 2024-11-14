@@ -1,17 +1,17 @@
 import React from 'react'
 import {data} from '../restApi.json'
-const Menu = () => {
+const Gatos = () => {
   return (
     <>
-      <section className='menu' id='menu'>
+      <section className='gatos' id='gatos'>
         <div className="container">
             <div className="heading_section">
-                <h1 className="heading">POPULAR DISHES</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, iusto dolorem! Voluptatibus ipsum nam mollitia architecto. Soluta pariatur eius et recusandae veritatis. Quasi, et molestias!</p>
+                <h1 className="heading">NOSSOS GATOS</h1>
+                <p>Cada um dos nossos gatos tem sua própria personalidade, mas todos estão prontos para encontrar um lar cheio de amor. Seja tímido ou aventureiro, cada um traz alegria de um jeito único!</p>
             </div>
-            <div className="dishes_container">
+            <div className="gatos_container">
                 {
-                    data[0].dishes.map(element => (
+                    data[0].gatos.map(element => (
                         <div className="card" key={element.id}>
                                 <img src={element.image} alt={element.title} />
                                 <h3>{element.title}</h3>
@@ -26,4 +26,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default Gatos

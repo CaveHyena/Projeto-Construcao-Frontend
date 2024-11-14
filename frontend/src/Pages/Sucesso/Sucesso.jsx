@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-const Success = () => {
+const Sucesso = () => {
   const [countdown, setCountdown] = useState(20);
   const navigate = useNavigate();
 
@@ -20,13 +20,13 @@ const Success = () => {
 
   return (
     <>
-      <section className="notFound">
+      <section className="PaginaNaoEncontrada">
         <div className="container">
-          <img src="/success.png" alt="success" />
+          <img src="/sucesso.png" alt="sucesso" />
           <h1>ENCONTRO MARCADO!</h1>
-          <p>Redirecionando para Home em {countdown} segundos...</p>
+          <p>Redirecionando para Menu em {countdown} segundos...</p>
           <Link to={"/"}>
-            Voltar para Home <HiOutlineArrowNarrowRight />
+            Voltar para Menu <HiOutlineArrowNarrowRight />
           </Link>
         </div>
       </section>
@@ -34,4 +34,4 @@ const Success = () => {
   );
 };
 
-export default Success;
+export default Sucesso;
