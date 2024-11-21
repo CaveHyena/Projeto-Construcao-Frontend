@@ -1,14 +1,14 @@
 import mongoose from "mongoose";
 import validator from "validator";
 
-const appointmentSchema = new mongoose.Schema({
-  firstName: {
+const usuarioSchema = new mongoose.Schema({
+  nome: {
     type: String,
     required: true,
     minLength: [3, "Primeiro nome deve conter pelo menos 3 letras."],
     maxLength: [30, "Primeiro nome não deve exceder 30 letras."],
   },
-  lastName: {
+  sobrenome: {
     type: String,
     required: true,
     minLength: [3, "Sobrenome deve conter pelo menos 3 letras."],
@@ -39,4 +39,4 @@ const appointmentSchema = new mongoose.Schema({
   }
 });
 
-export const Appointment = mongoose.model("Appointment", appointmentSchema);
+export const Usuario = mongoose.model("Usuario", usuarioSchema);

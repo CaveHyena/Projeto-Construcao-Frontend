@@ -20,80 +20,163 @@
                 "description": "Grande parte dos nossos gatos são castrados, contribuindo para o controle populacional e para a evitar comportamentos indesejados." 
             }
         ],
-        "gatos": [
+        "veterinariosEspecialidades" : [
             {
                 "id": 1,
-                "image": "./dinner1.jpeg",
-                "title": "ROASTED LAMB RUMP",
-                "category": "Dinner"
+                "image": "./review_2.png",
+                "title": "CIRURGIÃO VETERINÁRIO",
+                "description": "Realização de procedimentos cirúrgicos amplos." 
             },
             {
                 "id": 2,
-                "image": "./dinner2.png",
-                "title": "CITRUS CURED SALMON",
-                "category": "Dinner"
+                "image": "./review_2.png",
+                "title": "ODONTOLOGIA VETERINÁRIA",
+                "description": "Cuidados com os dentes e saúde bucal dos animais." 
             },
             {
                 "id": 3,
-                "image": "./breakfast1.png",
+                "image": "./review_3.png",
+                "title": "CLÍNICO GERAL",
+                "description": "Atendimento geral para diferentes tipos de animais, incluindo diagnóstico e tratamentos básicos." 
+            }
+        ],
+        "gatos": [
+            {
+                "id": 1,
+                "image": "./gato1.jpg",
+                "title": "6 MESES",
+                "caracteristica": "Filhote"
+            },
+            {
+                "id": 2,
+                "image": "./gato2.jpg",
+                "title": "CITRUS CURED SALMON",
+                "caracteristica": "Dinner"
+            },
+            {
+                "id": 3,
+                "image": "./gato3.jpg",
                 "title": "PAN SEARED SEA BASS",
-                "category": "Breakfast"
+                "caracteristica": "Breakfast"
             },
             {
                 "id": 4,
                 "image": "./dinner3.png",
                 "title": "STUFFED STRAWBERRY",
-                "category": "Dinner"
+                "caracteristica": "Dinner"
             },
             {
                 "id": 5,
                 "image": "./lunch1.png",
                 "title": "BEEF BURGER MEAL",
-                "category": "Lunch"
+                "caracteristica": "Lunch"
             },
             {
                 "id": 6,
                 "image": "./dinner4.png",
                 "title": "MUSSELS SOUP",
-                "category": "Dinner"
+                "caracteristica": "Dinner"
             },
             {
                 "id": 7,
                 "image": "./dinner5.png",
                 "title": "ITALIAN SPAGHETTI",
-                "category": "Dinner"
+                "caracteristica": "Dinner"
             },
             {
                 "id": 8,
                 "image": "./dinner6.png",
                 "title": "GRILLED FISH",
-                "category": "Dinner"
+                "caracteristica": "Dinner"
+            },
+            {
+              "id": 7,
+              "image": "./dinner5.png",
+              "title": "ITALIAN SPAGHETTI",
+              "caracteristica": "Dinner"
+            },
+            {
+              "id": 8,
+              "image": "./dinner6.png",
+              "title": "GRILLED FISH",
+              "caracteristica": "Dinner"
             }
         ],
-        "team": [
+        "veterinarios": [
             {
                 "id": 1,
-                "image": "./team_member_1.png",
-                "name": "JOHNATHAN TYLER",
-                "designation": "Founder & Head Chef"
+                "image": "./gato1.jpg",
+                "title": "CLÍNICO GERAL",
+                "especializacao": "Cirurgia Geral"
             },
             {
                 "id": 2,
-                "image": "./team_member_2.png",
-                "name": "WADE WARREN",
-                "designation": "Sous Chef"
+                "image": "./gato2.jpg",
+                "title": "CITRUS CURED SALMON",
+                "especializacao": "Ortopedia Veterinária"
             },
             {
                 "id": 3,
-                "image": "./team_member_3.png",
-                "name": "JHON DOE",
-                "designation": "Fast Food Chef"
+                "image": "./gato3.jpg",
+                "title": "PAN SEARED SEA BASS",
+                "especializacao": "Odontologia Veterinária"
             },
             {
                 "id": 4,
-                "image": "./team_member_4.png",
-                "name": "ALEX COAL",
-                "designation": "Senior Chef"
+                "image": "./dinner3.png",
+                "title": "STUFFED STRAWBERRY",
+                "especializacao": "Nefrologia e Urologia Veterinária"
+            },
+            {
+                "id": 5,
+                "image": "./lunch1.png",
+                "title": "BEEF BURGER MEAL",
+                "especializacao": "Oftalmologia Veterinária"
+            },
+            {
+                "id": 6,
+                "image": "./dinner4.png",
+                "title": "MUSSELS SOUP",
+                "especializacao": "Oncologia Veterinária"
+            },
+            {
+                "id": 7,
+                "image": "./dinner5.png",
+                "title": "ITALIAN SPAGHETTI",
+                "especializacao": "Gastroenterologia Veterinária"
+            },
+            {
+                "id": 8,
+                "image": "./dinner6.png",
+                "title": "GRILLED FISH",
+                "especializacao": "Nefrologia e Urologia Veterinária"
+            }
+        ],
+        
+        "time": [
+            {
+                "id": 1,
+                "image": "./membro_grupo_1.png",
+                "name": "LÁYSLA MARIA",
+                "designation": "Vice-Líder"
+            },
+            {
+                "id": 2,
+                "image": "./membro_grupo_2.png",
+                "name": "RAQUEL ARAUJO",
+                "designation": "Coordenadora do Projeto"
+            },
+            {
+                "id": 3,
+                "image": "./membro_grupo_3.png",
+                "name": "NAIRA NATASHA",
+                "designation": "Assistente Técnica"
+            },
+            {
+                "id": 4,
+                "image": "./membro_grupo_4.png",
+                "name": "BRUNA MAYUMI",
+                "designation": "Líder - Desenvolvedora Principal"
             }
         ],
         "testimonials": [
@@ -139,33 +222,6 @@
                 "id": 4,
                 "number": "200",
                 "title": "Food Dishes"
-            }
-        ],
-        "navbarLinks": [
-            {
-                "id": 1,
-                "title": "HOME",
-                "link": "heroSection"
-            },
-            {
-                "id": 2,
-                "title": "SOBRE NÓS",
-                "link": "about"
-            },
-            {
-                "id": 3,
-                "title": "SERVICES",
-                "link": "qualities"
-            },
-            {
-                "id": 4,
-                "title": "TEAM",
-                "link": "team"
-            },
-            {
-              "id": 5,
-              "title": "MARQUE UMA VISITA",
-              "link": "appointment"
             }
         ]
     

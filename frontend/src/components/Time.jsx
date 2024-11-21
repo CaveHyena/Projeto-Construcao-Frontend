@@ -1,19 +1,18 @@
 import React from "react";
 import { data } from "../restApi.json";
-const Team = () => {
+const Time = () => {
   return (
-    <section className="team" id="team">
+    <section className="time" id="time">
       <div className="container">
         <div className="heading_section">
-          <h1 className="heading">OUR TEAM</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            fugit dicta, ipsum impedit quam laboriosam quas doloremque quia
-            perferendis laborum.
+          <h1 className="heading">NOSSO TIME</h1>
+<p>
+    Cada membro contribui com suas habilidades para desenvolver uma experiência de usuário funcional, 
+    garantindo a integração eficiente de componentes e o cumprimento dos requisitos da Construção de Frontend.
           </p>
         </div>
-        <div className="team_container">
-          {data[0].team.map((element) => {
+        <div className="time_container">
+          {data[0].time.map((element) => {
             return (
               <div className="card" key={element.id}>
                 <img src={element.image} alt={element.name} />
@@ -28,4 +27,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default Time;

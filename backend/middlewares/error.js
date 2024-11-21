@@ -1,4 +1,4 @@
-class ErrorHandler extends Error {
+class ManipuladoreDeErros extends Error {
   constructor(message, statusCode) {
     super(message);
     this.statusCode = statusCode;
@@ -11,20 +11,20 @@ export const errorMiddleware = (err, req, res, next) => {
 
   if (err.name === "CastError") {
     const message = `Resource not found. Invalid: ${err.path}`;
-    err = new ErrorHandler(message, 400);
+    err = new ManipuladoreDeErros(message, 400);
   }
 
 
   if (err.name === 'ValidationError') {
-    const validationErrors = Object.values(error.errors).map(err => err.message);
-    return next(new ErrorHandler(validationErrors.join(', '), 400));
+    const validationErrors = Object.values(err.errors).map(err => err.message);
+    return next(new ManipuladoreDeErros(validationErrors.join(', '), 400));
   }
 
 
   return res.status(err.statusCode).json({
-    sucesso: false,
+    success: false,
     message: err.message,
   });
 };
 
-export default ErrorHandler;
+export default ManipuladoreDeErros;

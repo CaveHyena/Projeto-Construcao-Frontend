@@ -3,12 +3,12 @@ import mongoose from "mongoose";
 export const dbConnection = () => {
   mongoose
     .connect(process.env.MONGO_URI, {
-      dbName: "GATOS_O_S_",
+      dbName: "PROJETO",
     })
     .then(() => {
-      console.log("Connected to database!");
+      console.log("Conectado ao banco de dados!");
     })
     .catch((err) => {
-      console.log(`Some error occured while connecing to database: ${err}`);
+      console.log(`Ocorreu algum erro ao conectar ao banco de dados: ${err}`);
     });
 };

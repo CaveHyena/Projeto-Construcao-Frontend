@@ -4,23 +4,25 @@ import About from '../../components/About'
 import Qualities from '../../components/Qualities'
 import Gatos from '../../components/Gatos'
 import WhoAreWe from '../../components/WhoAreWe'
-import Team from '../../components/Team'
-import Appointment from '../../components/Appointment'
+import Time from '../../components/Time'
 import Footer from '../../components/Footer'
+import Especialidades from '../../components/Especialidades'
+import Veterinarios from '../../components/Veterinarios'
 
-const Menu = () => {
+const PaginaInicial = () => {
   return (
     <>
       <HeroSection/>
       <About/>
       <Qualities/>
       <Gatos/>
+      <Especialidades/>
+      <Veterinarios/>
       <WhoAreWe/>
-      <Team/>
-      <Appointment/>
+      <Time/>
       <Footer/>
     </>
   )
 }
 
-export default Menu
+export default PaginaInicial

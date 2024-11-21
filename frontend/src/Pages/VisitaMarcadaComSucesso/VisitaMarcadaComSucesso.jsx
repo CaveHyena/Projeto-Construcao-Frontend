@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-const Sucesso = () => {
+
+const MarcadoComSucesso = () => {
   const [countdown, setCountdown] = useState(20);
   const navigate = useNavigate();
 
@@ -22,11 +23,11 @@ const Sucesso = () => {
     <>
       <section className="PaginaNaoEncontrada">
         <div className="container">
-          <img src="/sucesso.png" alt="sucesso" />
-          <h1>ENCONTRO MARCADO!</h1>
-          <p>Redirecionando para Menu em {countdown} segundos...</p>
+          <img src="/sucesso.png" alt="Visita marcada com sucesso" />
+          <h1>VISITA MARCADA!</h1>
+          <p>Redirecionando para a PaginaInicial em {countdown} segundos...</p>
           <Link to={"/"}>
-            Voltar para Menu <HiOutlineArrowNarrowRight />
+            Voltar para PaginaInicial <HiOutlineArrowNarrowRight />
           </Link>
         </div>
       </section>
@@ -34,4 +35,4 @@ const Sucesso = () => {
   );
 };
 
-export default Sucesso;
+export default MarcadoComSucesso;

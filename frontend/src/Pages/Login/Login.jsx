@@ -8,21 +8,21 @@ import { useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
-const Appointment = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+const Cadastrar = () => {
+  const [nome, setnome] = useState("");
+  const [sobrenome, setsobrenome] = useState("");
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [phone, setPhone] = useState("");
   const navigate = useNavigate();
 
-  const handleAppointment = async (e) => {
+  const cadastrar = async (e) => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/appointment/send",
-        { firstName, lastName, email, phone, date, time },
+        "http://localhost:4000/login/usuario/cadastrar",
+        { nome, sobrenome, email, phone, date, time },
         {
           headers: {
             "Content-Type": "application/json",
@@ -30,14 +30,14 @@ const Appointment = () => {
           withCredentials: true,
         }
       );
-      toast.sucesso(data.message); 
-      setFirstName("");
-      setLastName("");
-      setPhone(0);
+      toast.success(data.message); 
+      setnome("");
+      setsobrenome("");
+      setPhone("");
       setEmail("");
       setTime("");
       setDate("");
-      navigate("/sucesso");
+      navigate("/visita-marcada");
     } catch (error) {
       if (error.response) {
         toast.error(error.response.data.message);
@@ -48,13 +48,13 @@ const Appointment = () => {
   };
 
   return (
-    <section className="appointment">
+    <section className="usuario">
       <div className="container">
         <div className="banner">
           <img className="cat" src="/form.png" alt="res" />
         </div>
-        <div className="banner" id="appointment">
-          <div className="appointment_form_box">
+        <div className="banner" id="usuario">
+          <div className="usuario_form_box">
             <h1>MARQUE UMA VISITA</h1>
             <p>
               Ou se preferir, nos chame pelo <a href="https://wa.me/55982566294?text=Olá!%20Gostaria%20de%20saber%20mais%20informações." target="_blank">
@@ -66,14 +66,14 @@ const Appointment = () => {
                 <input
                   type="text"
                   placeholder="Nome"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  value={nome}
+                  onChange={(e) => setnome(e.target.value)}
                 />
                 <input
                   type="text"
                   placeholder="Sobrenome"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
+                  value={sobrenome}
+                  onChange={(e) => setsobrenome(e.target.value)}
                 />
               </div>
               <div>
@@ -106,7 +106,7 @@ const Appointment = () => {
                   defaultCountry="BR" 
                 />
               </div>
-              <button type="submit" onClick={handleAppointment}>
+              <button type="submit" onClick={cadastrar}>
                 MARCAR VISITA{" "}
                 <span>
                   <HiOutlineArrowNarrowRight />
@@ -120,4 +120,4 @@ const Appointment = () => {
   );
 };
 
-export default Appointment;
+export default Cadastrar;

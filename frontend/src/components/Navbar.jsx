@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { data } from "../restApi.json";
-import { Link } from "react-scroll";
+import { NavLink, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [token, setToken] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,7 +16,6 @@ const Navbar = () => {
         setIsSticky(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -29,18 +29,28 @@ const Navbar = () => {
         <div className="logo">GATOS.O.S.</div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
-            {data[0].navbarLinks.map((element) => (
-              <Link
-                to={element.link}
-                spy={true}
-                smooth={true}
-                duration={500}
-                key={element.id}
-              >
-                {element.title}
-              </Link>
-            ))}
+            <NavLink to='/' onClick={() => setShow(false)}>
+              <li>PÁGINA INICIAL</li>
+            </NavLink>
+            <NavLink to='/veterinarios' onClick={() => setShow(false)}>
+              <li>VETERINÁRIOS ASSOCIADOS</li>
+            </NavLink>
+            <NavLink to='/gatos' onClick={() => setShow(false)}>
+              <li>ADOTE</li>
+            </NavLink>
           </div>
+          {
+            token
+            ? <div className="containerPerfil">
+              <img className="imagemPerfil" src="review_3.png"/>
+              <div className="perfilDropdown">
+                <p onClick={()=>navigate('perfil')}>Perfil</p>
+                <p onClick={()=>navigate('visitas-marcadas')}>Minhas Visitas Marcadas</p>
+                <p onClick={()=>setToken(false)}>Sair</p>
+              </div>
+            </div>
+            : <button className="loginButton" onClick={() => {navigate('/login'); setShow(false)}}>LOGIN</button>
+          }
         </div>
         <div className="hamburger" onClick={() => setShow(!show)}>
           <GiHamburgerMenu />

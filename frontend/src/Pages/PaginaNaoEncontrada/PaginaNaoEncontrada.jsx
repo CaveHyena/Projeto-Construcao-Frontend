@@ -11,7 +11,7 @@ const PaginaNaoEncontrada = () => {
           <h1>PÁGINA NÃO ENCONTRADA :/</h1>
           <p>Oops! Esta página não pode ser encontrada!</p>
           <Link to={"/"}>
-            Retornar ao Menu{" "}
+            Retornar à PáginaInicial{" "}
             <span>
               <HiOutlineArrowNarrowRight />
             </span>
