@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
+  const [mostrar, setMostrar] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [token, setToken] = useState(true);
   const navigate = useNavigate();
@@ -26,24 +27,24 @@ const Navbar = () => {
   return (
     <>
       <nav className={isSticky ? "sticky" : ""}>
-        <div className="logo">GATOS.O.S.</div>
+        <div className="logo" onClick={()=>navigate('/')}>GATOS.O.S.</div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
-            <NavLink to='/' onClick={() => setShow(false)}>
+            <NavLink to='/' onClick={() => {setShow(false); scrollTo(0,0)}}>
               <li>PÁGINA INICIAL</li>
             </NavLink>
-            <NavLink to='/veterinarios' onClick={() => setShow(false)}>
+            <NavLink to='/veterinarios' onClick={() => {setShow(false); scrollTo(0,0)}}>
               <li>VETERINÁRIOS ASSOCIADOS</li>
             </NavLink>
-            <NavLink to='/gatos' onClick={() => setShow(false)}>
+            <NavLink to='/gatos' onClick={() => {setShow(false); scrollTo(0,0)}}>
               <li>ADOTE</li>
             </NavLink>
           </div>
           {
             token
             ? <div className="containerPerfil">
-              <img className="imagemPerfil" src="review_3.png"/>
-              <div className="perfilDropdown">
+              <img className="imagemPerfil" src="/review_3.png" onClick={() => setMostrar(!mostrar)}/>
+              <div className={mostrar ? "perfilDropdown mostrar" : "perfilDropdown esconder"}>
                 <p onClick={()=>navigate('perfil')}>Perfil</p>
                 <p onClick={()=>navigate('visitas-marcadas')}>Minhas Visitas Marcadas</p>
                 <p onClick={()=>setToken(false)}>Sair</p>

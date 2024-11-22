@@ -30,7 +30,7 @@
             {
                 "id": 2,
                 "image": "./review_2.png",
-                "title": "ODONTOLOGIA VETERINÁRIA",
+                "title": "Oftalmologia Veterinária",
                 "description": "Cuidados com os dentes e saúde bucal dos animais." 
             },
             {
@@ -42,61 +42,61 @@
         ],
         "gatos": [
             {
-                "id": 1,
+                "id": "gato1",
                 "image": "./gato1.jpg",
                 "title": "6 MESES",
                 "caracteristica": "Filhote"
             },
             {
-                "id": 2,
+                "id": "gato2",
                 "image": "./gato2.jpg",
                 "title": "CITRUS CURED SALMON",
                 "caracteristica": "Dinner"
             },
             {
-                "id": 3,
+                "id": "gato3",
                 "image": "./gato3.jpg",
                 "title": "PAN SEARED SEA BASS",
                 "caracteristica": "Breakfast"
             },
             {
-                "id": 4,
+                "id": "gato4",
                 "image": "./dinner3.png",
                 "title": "STUFFED STRAWBERRY",
                 "caracteristica": "Dinner"
             },
             {
-                "id": 5,
+                "id": "gato5",
                 "image": "./lunch1.png",
                 "title": "BEEF BURGER MEAL",
                 "caracteristica": "Lunch"
             },
             {
-                "id": 6,
+                "id": "gato6",
                 "image": "./dinner4.png",
                 "title": "MUSSELS SOUP",
                 "caracteristica": "Dinner"
             },
             {
-                "id": 7,
+                "id": "gato7",
                 "image": "./dinner5.png",
                 "title": "ITALIAN SPAGHETTI",
                 "caracteristica": "Dinner"
             },
             {
-                "id": 8,
+                "id": "gato8",
                 "image": "./dinner6.png",
                 "title": "GRILLED FISH",
                 "caracteristica": "Dinner"
             },
             {
-              "id": 7,
+              "id": "gato9",
               "image": "./dinner5.png",
               "title": "ITALIAN SPAGHETTI",
               "caracteristica": "Dinner"
             },
             {
-              "id": 8,
+              "id": "gato10",
               "image": "./dinner6.png",
               "title": "GRILLED FISH",
               "caracteristica": "Dinner"
@@ -104,52 +104,52 @@
         ],
         "veterinarios": [
             {
-                "id": 1,
-                "image": "./gato1.jpg",
+                "id": "vet1",
+                "image": "/gato1.jpg",
                 "title": "CLÍNICO GERAL",
                 "especializacao": "Cirurgia Geral"
             },
             {
-                "id": 2,
-                "image": "./gato2.jpg",
+                "id": "vet2",
+                "image": "/gato2.jpg",
                 "title": "CITRUS CURED SALMON",
                 "especializacao": "Ortopedia Veterinária"
             },
             {
-                "id": 3,
-                "image": "./gato3.jpg",
+                "id": "vet3",
+                "image": "/gato3.jpg",
                 "title": "PAN SEARED SEA BASS",
                 "especializacao": "Odontologia Veterinária"
             },
             {
-                "id": 4,
-                "image": "./dinner3.png",
+                "id": "vet4",
+                "image": "/dinner3.png",
                 "title": "STUFFED STRAWBERRY",
                 "especializacao": "Nefrologia e Urologia Veterinária"
             },
             {
-                "id": 5,
-                "image": "./lunch1.png",
+                "id": "vet5",
+                "image": "/lunch1.png",
                 "title": "BEEF BURGER MEAL",
                 "especializacao": "Oftalmologia Veterinária"
             },
             {
-                "id": 6,
-                "image": "./dinner4.png",
+                "id": "vet6",
+                "image": "/dinner4.png",
                 "title": "MUSSELS SOUP",
                 "especializacao": "Oncologia Veterinária"
             },
             {
-                "id": 7,
-                "image": "./dinner5.png",
+                "id": "vet7",
+                "image": "/dinner5.png",
                 "title": "ITALIAN SPAGHETTI",
-                "especializacao": "Gastroenterologia Veterinária"
+                "especializacao": "Oftalmologia Veterinária"
             },
             {
-                "id": 8,
-                "image": "./dinner6.png",
+                "id": "vet8",
+                "image": "/dinner6.png",
                 "title": "GRILLED FISH",
-                "especializacao": "Nefrologia e Urologia Veterinária"
+                "especializacao": "Oftalmologia Veterinária"
             }
         ],
         

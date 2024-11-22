@@ -1,6 +1,5 @@
 import React from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import { FaWhatsapp } from "react-icons/fa";
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -9,6 +8,7 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
 const Cadastrar = () => {
+  const [state, setState] = useState("Entrar")
   const [nome, setnome] = useState("");
   const [sobrenome, setsobrenome] = useState("");
   const [email, setEmail] = useState("");
@@ -55,12 +55,8 @@ const Cadastrar = () => {
         </div>
         <div className="banner" id="usuario">
           <div className="usuario_form_box">
-            <h1>MARQUE UMA VISITA</h1>
-            <p>
-              Ou se preferir, nos chame pelo <a href="https://wa.me/55982566294?text=Olá!%20Gostaria%20de%20saber%20mais%20informações." target="_blank">
-  WhatsApp. <FaWhatsapp />
-</a>
-            </p>
+            <h1>{state === "Entrar" ? "Criar Conta" : "Login"}MARQUE UMA VISITA</h1>
+            
             <form>
               <div>
                 <input

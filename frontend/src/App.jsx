@@ -8,9 +8,10 @@ import PaginaNaoEncontrada from './Pages/PaginaNaoEncontrada/PaginaNaoEncontrada
 import Visitas from './Pages/VisitasMarcadas/VisitasMarcadas';
 import VisitaMarcadaComSucesso from './Pages/VisitaMarcadaComSucesso/VisitaMarcadaComSucesso';
 import Gatos from './Pages/Gatos/Gatos';
-import Veterinarios from './Pages/Veterinarios/veterinarios';
+import Veterinarios from './Pages/Veterinarios/Veterinarios';
 import Login from './Pages/Login/Login';
 import Perfil from './Pages/Perfil/Perfil';
+import MarcarConsulta from './Pages/MarcarVisita/MarcarConsulta';
 
 const App = () => {
   return (
@@ -23,11 +24,8 @@ const App = () => {
         <Route path='/perfil' element={<Perfil/>}/>
         <Route path='/gatos' element={<Gatos/>}/>
         <Route path='/gatos/:caracteristica' element={<Gatos/>}/>
-        <Route path='/gatos/visita/:id' element={<Gatos/>}/>
         <Route path='/veterinarios' element={<Veterinarios/>}/>
-        <Route path='/veterinarios/:especialidade' element={<Veterinarios/>}/>
-        <Route path='/veterinarios/visita/:id' element={<Veterinarios/>}/>
-        <Route path='/marcar-visita' element={<VisitaMarcadaComSucesso/>}/>
+        <Route path='/marcar-visita/:vetId' element={<MarcarConsulta/>}/>
         <Route path='/marcada-com-sucesso' element={<VisitaMarcadaComSucesso/>}/>
         <Route path='/visitas-marcadas' element={<Visitas/>}/>
         <Route path='/visitas-marcadas/:opcao' element={<Visitas/>}/>

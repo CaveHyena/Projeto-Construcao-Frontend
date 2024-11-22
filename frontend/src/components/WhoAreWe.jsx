@@ -1,7 +1,10 @@
-import React from 'react'
-import {data} from '../restApi.json'
+import React, { useContext } from 'react'
+import { AppContext } from '../context/AppContext';
 
 const WhoAreWe = () => {
+
+  const {data} = useContext(AppContext);
+
   return (
     <>
       <section className='who_are_we' id='who_are_we'>
@@ -18,7 +21,7 @@ const WhoAreWe = () => {
           </div>
           <div className="image_banner">
             <img className='gradient_bg' src="center.svg" alt="gradientBg" />
-            <img src="whoweare.png" alt="food" />
+            <img src="whoweare.jpg" alt="food" />
           </div>
           <div className="text_banner">
             {

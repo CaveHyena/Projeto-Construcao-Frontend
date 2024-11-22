@@ -1,9 +1,9 @@
-import React from 'react'
-import {data} from '../restApi.json'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { AppContext } from '../context/AppContext';
 
 const Veterinarios = () => {
-
+  const {data} = useContext(AppContext);
   const navigate = useNavigate();
 
   return (
@@ -17,7 +17,7 @@ const Veterinarios = () => {
             <div className="gatos_container">
                 {
                   data[0].veterinarios.map(element => (
-                    <div className="card" key={element.id} onClick={()=>navigate(`/veterinarios/visita/${element.id}`)}>
+                    <div className="card" key={element.id} onClick={()=>navigate(`/marcar-visita/${element.id}`)}>
                       <img src={element.image} alt={element.title} />
                       <h3>{element.title}</h3>
                       <button>{element.especializacao}</button>
