@@ -10,7 +10,7 @@ const HeroSection = () => {
           </div>
           <div className="combined_boxes">
             <div className="imageBox">
-              <img src="./hero1.png" alt="hero" />
+              <img src="/hero1.png" alt="hero" />
             </div>
             <div className="textAndLogo">
               <div className="textWithSvg">
@@ -24,7 +24,7 @@ const HeroSection = () => {
         </div>
         <div className="banner">
           <div className="imageBox">
-            <img src="hero2.png" alt="hero" />
+            <img src="/hero2.png" alt="hero" />
           </div>
           <h1 className="title dishes_title">Ame</h1>
         </div>

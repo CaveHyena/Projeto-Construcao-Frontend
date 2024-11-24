@@ -4,12 +4,7 @@ import {data} from "../restApi.json"
 export const AppContext = createContext()
 
 const AppContextProvider = (props) => {
-
-  const moedaSímbolo = 'R$'
-
-  const value = {
-    data, moedaSímbolo
-  }
+  const value = { data }
 
   return (
     <AppContext.Provider value={value}>

@@ -6,7 +6,7 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const [mostrar, setMostrar] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [token, setToken] = useState(true);
+  const [usuario, setUsuario] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,27 +33,30 @@ const Navbar = () => {
             <NavLink to='/' onClick={() => {setShow(false); scrollTo(0,0)}}>
               <li>PÁGINA INICIAL</li>
             </NavLink>
-            <NavLink to='/veterinarios' onClick={() => {setShow(false); scrollTo(0,0)}}>
-              <li>VETERINÁRIOS ASSOCIADOS</li>
+            <NavLink to='/consultas' onClick={() => {setShow(false); scrollTo(0,0)}}>
+              <li>CONSULTAS VETERINÁRIAS</li>
             </NavLink>
             <NavLink to='/gatos' onClick={() => {setShow(false); scrollTo(0,0)}}>
               <li>ADOTE</li>
             </NavLink>
+            <NavLink to='/veterinarios' onClick={() => {setShow(false); scrollTo(0,0)}}>
+              <li>VETERINARIOS ASSOCIADOS</li>
+            </NavLink>
           </div>
           {
-            token
+            usuario
             ? <div className="containerPerfil">
               <img className="imagemPerfil" src="/review_3.png" onClick={() => setMostrar(!mostrar)}/>
               <div className={mostrar ? "perfilDropdown mostrar" : "perfilDropdown esconder"}>
-                <p onClick={()=>navigate('perfil')}>Perfil</p>
-                <p onClick={()=>navigate('visitas-marcadas')}>Minhas Visitas Marcadas</p>
-                <p onClick={()=>setToken(false)}>Sair</p>
+                <p onClick={()=>{navigate('/perfil'); setShow(false); scrollTo(0,0); setMostrar(!mostrar)}}>PERFIL</p>
+                <p onClick={()=>{navigate('/dashboard'); setShow(false); scrollTo(0,0); setMostrar(!mostrar)}}>MEU PAINEL</p>
+                <p onClick={()=>setUsuario(false)}>SAIR</p>
               </div>
             </div>
             : <button className="loginButton" onClick={() => {navigate('/login'); setShow(false)}}>LOGIN</button>
           }
         </div>
-        <div className="hamburger" onClick={() => setShow(!show)}>
+        <div className="hamburger" onClick={() => {setShow(!show); setMostrar(false)}}>
           <GiHamburgerMenu />
         </div>
       </nav>

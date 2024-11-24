@@ -17,7 +17,7 @@ const Gatos = () => {
             </div>
             <div className="gatos_container">
                 {
-                  data[0].gatos.slice(0,8).map(element => (
+                  data[0].gatos.map(element => (
                     <div className="card" key={element.id} onClick={() => { navigate(`/gato/${element.id}`) }}>
                       <img src={element.image} alt={element.title} />
                       <h3>{element.title}</h3>
@@ -25,7 +25,6 @@ const Gatos = () => {
                     </div>
                   ))
                 }
-                <button onClick={()=>{navigate(`/gatos`); scrollTo(0,0)}}>Ver mais</button>
             </div>
         </div>
       </section>

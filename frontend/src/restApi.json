@@ -1,227 +1,213 @@
 {
     "data": [
-        {"ourQualities" : [
+        {"gatoCaracteristicas" : [
             {
                 "id": 1,
-                "image": "./Gato_saude.svg",
-                "title": "SAUDÁVEIS",
-                "description": "Esses gatinhos estão em excelente estado de saúde, recebendo todos os cuidados necessários para garantir uma vida longa e feliz." 
+                "imagem": "/Gato_saude.svg",
+                "titulo": "SAUDÁVEIS",
+                "descricao": "Esses gatinhos estão em excelente estado de saúde, recebendo todos os cuidados necessários para garantir uma vida longa e feliz." 
             },
             {
                 "id": 2,
-                "image": "./Cat_Energy.svg",
-                "title": "ANIMADOS",
-                "description": "Esses gatinhos são cheios de energia e um pouco travessos! Estão sempre em movimento, prontos para explorar cada cantinho, e podem ser um pouco independentes." 
+                "imagem": "/Cat_Energy.svg",
+                "titulo": "ANIMADOS",
+                "descricao": "Esses gatinhos são cheios de energia e um pouco travessos! Estão sempre em movimento, prontos para explorar cada cantinho, e podem ser um pouco independentes." 
             },
             {
                 "id": 3,
-                "image": "./Cat_Castrated.svg",
-                "title": "CASTRADOS",
-                "description": "Grande parte dos nossos gatos são castrados, contribuindo para o controle populacional e para a evitar comportamentos indesejados." 
-            }
-        ],
-        "veterinariosEspecialidades" : [
-            {
-                "id": 1,
-                "image": "./review_2.png",
-                "title": "CIRURGIÃO VETERINÁRIO",
-                "description": "Realização de procedimentos cirúrgicos amplos." 
-            },
-            {
-                "id": 2,
-                "image": "./review_2.png",
-                "title": "Oftalmologia Veterinária",
-                "description": "Cuidados com os dentes e saúde bucal dos animais." 
-            },
-            {
-                "id": 3,
-                "image": "./review_3.png",
-                "title": "CLÍNICO GERAL",
-                "description": "Atendimento geral para diferentes tipos de animais, incluindo diagnóstico e tratamentos básicos." 
+                "imagem": "/Cat_Castrated.svg",
+                "titulo": "CASTRADOS",
+                "descricao": "Grande parte dos nossos gatos são castrados, contribuindo para o controle populacional e para a evitar comportamentos indesejados." 
             }
         ],
         "gatos": [
             {
-                "id": "gato1",
-                "image": "./gato1.jpg",
-                "title": "6 MESES",
-                "caracteristica": "Filhote"
+              "id": "1",
+              "image": "/gato1.jpg",
+              "title": "Mimi",
+              "caracteristica": "Filhote brincalhão",
+              "abrigo": {
+                "nome": "Abrigo Esperança Animal",
+                "endereco": "Rua das Flores, 123, São Paulo, SP",
+                "contato": {
+                  "celular": "+55 11 91234-5678",
+                  "email": "contato@esperancaanimal.org"
+                }
+              }
             },
             {
-                "id": "gato2",
-                "image": "./gato2.jpg",
-                "title": "CITRUS CURED SALMON",
-                "caracteristica": "Dinner"
+              "id": "2",
+              "image": "/gato2.jpg",
+              "title": "Tom",
+              "caracteristica": "Adulto calmo e carinhoso",
+              "abrigo": {
+                "nome": "Lar dos Gatos",
+                "endereco": "Av. Brasil, 456, Rio de Janeiro, RJ",
+                "contato": {
+                  "celular": "+55 21 99876-5432",
+                  "email": "adocao@lardosgatos.org"
+                }
+              }
             },
             {
-                "id": "gato3",
-                "image": "./gato3.jpg",
-                "title": "PAN SEARED SEA BASS",
-                "caracteristica": "Breakfast"
+              "id": "3",
+              "image": "/gato3.jpg",
+              "title": "Luna",
+              "caracteristica": "Gata idosa com muito amor para dar",
+              "abrigo": {
+                "nome": "Casa de Apoio Felino",
+                "endereco": "Praça da Paz, 789, Belo Horizonte, MG",
+                "contato": {
+                  "celular": "+55 31 98765-4321",
+                  "email": "apoiofelino@casa.org"
+                }
+              }
             },
             {
-                "id": "gato4",
-                "image": "./dinner3.png",
-                "title": "STUFFED STRAWBERRY",
-                "caracteristica": "Dinner"
+              "id": "4",
+              "image": "https://img.freepik.com/fotos-premium/diario-de-gato-com-fotos-cativantes-para-amante-de-gatinhos_563241-4085.jpg?w=360",
+              "title": "Simba",
+              "caracteristica": "Filhote curioso e energético",
+              "abrigo": {
+                "nome": "Refúgio dos Bichos",
+                "endereco": "Rua Alegre, 321, Curitiba, PR",
+                "contato": {
+                  "celular": "+55 41 91234-5678",
+                  "email": "contato@refugiodosbichos.org"
+                }
+              }
             },
             {
-                "id": "gato5",
-                "image": "./lunch1.png",
-                "title": "BEEF BURGER MEAL",
-                "caracteristica": "Lunch"
+              "id": "5",
+              "image": "https://blog-static.petlove.com.br/wp-content/uploads/2019/06/shutterstock_632318627.jpg",
+              "title": "Nina",
+              "caracteristica": "Adulto com personalidade forte",
+              "abrigo": {
+                "nome": "Amigos dos Animais",
+                "endereco": "Av. Central, 654, Porto Alegre, RS",
+                "contato": {
+                  "celular": "+55 51 92345-6789",
+                  "email": "contato@amigosdosanimais.org"
+                }
+              }
             },
             {
-                "id": "gato6",
-                "image": "./dinner4.png",
-                "title": "MUSSELS SOUP",
-                "caracteristica": "Dinner"
+              "id": "6",
+              "image": "https://estaticos-cdn.prensaiberica.es/clip/300e999b-0ce7-4ab4-84d8-08a108ae8394_16-9-discover-aspect-ratio_default_0.jpg",
+              "title": "Félix",
+              "caracteristica": "Gato preto misterioso e carismático",
+              "abrigo": {
+                "nome": "Associação Felina de Recife",
+                "endereco": "Rua da Luz, 987, Recife, PE",
+                "contato": {
+                  "celular": "+55 81 94567-1234",
+                  "email": "contato@associacaofelina.org"
+                }
+              }
             },
             {
-                "id": "gato7",
-                "image": "./dinner5.png",
-                "title": "ITALIAN SPAGHETTI",
-                "caracteristica": "Dinner"
+              "id": "7",
+              "image": "https://blog-static.petlove.com.br/wp-content/uploads/2021/01/gato-domestico-pelo-curto-petlove1.jpg",
+              "title": "Zoe",
+              "caracteristica": "Filhote manhosa e afetuosa",
+              "abrigo": {
+                "nome": "Abrigo Pata Amiga",
+                "endereco": "Rua Harmonia, 200, Salvador, BA",
+                "contato": {
+                  "celular": "+55 71 99988-7777",
+                  "email": "contato@pataamiga.org"
+                }
+              }
             },
             {
-                "id": "gato8",
-                "image": "./dinner6.png",
-                "title": "GRILLED FISH",
-                "caracteristica": "Dinner"
+              "id": "8",
+              "image": "https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/75552.jpg?w=1900&h=1267",
+              "title": "Oliver",
+              "caracteristica": "Adulto aventureiro que ama explorar",
+              "abrigo": {
+                "nome": "Refúgio dos Animais",
+                "endereco": "Rua Principal, 123, Florianópolis, SC",
+                "contato": {
+                  "celular": "+55 48 98877-6655",
+                  "email": "contato@refugioanimais.org"
+                }
+              }
             },
             {
-              "id": "gato9",
-              "image": "./dinner5.png",
-              "title": "ITALIAN SPAGHETTI",
-              "caracteristica": "Dinner"
+              "id": "9",
+              "image": "https://img.freepik.com/fotos-gratis/feche-o-gato-fofo-dentro-de-casa_23-2148882585.jpg?semt=ais_hybrid",
+              "title": "Chico",
+              "caracteristica": "Gato idoso tranquilo e dorminhoco",
+              "abrigo": {
+                "nome": "Casa do Gatinho",
+                "endereco": "Av. Boa Vista, 456, Fortaleza, CE",
+                "contato": {
+                  "celular": "+55 85 97777-8888",
+                  "email": "contato@casadogatinho.org"
+                }
+              }
             },
             {
-              "id": "gato10",
-              "image": "./dinner6.png",
-              "title": "GRILLED FISH",
-              "caracteristica": "Dinner"
+              "id": "10",
+              "image": "https://blog-static.petlove.com.br/wp-content/uploads/2018/09/Gato-idoso-perfil.jpg",
+              "title": "Mel",
+              "caracteristica": "Filhote cheia de energia e curiosidade",
+              "abrigo": {
+                "nome": "Instituto Gatos do Bem",
+                "endereco": "Rua São Francisco, 789, Manaus, AM",
+                "contato": {
+                  "celular": "+55 92 91234-5678",
+                  "email": "contato@gatosdobem.org"
+                }
+              }
             }
-        ],
-        "veterinarios": [
-            {
-                "id": "vet1",
-                "image": "/gato1.jpg",
-                "title": "CLÍNICO GERAL",
-                "especializacao": "Cirurgia Geral"
-            },
-            {
-                "id": "vet2",
-                "image": "/gato2.jpg",
-                "title": "CITRUS CURED SALMON",
-                "especializacao": "Ortopedia Veterinária"
-            },
-            {
-                "id": "vet3",
-                "image": "/gato3.jpg",
-                "title": "PAN SEARED SEA BASS",
-                "especializacao": "Odontologia Veterinária"
-            },
-            {
-                "id": "vet4",
-                "image": "/dinner3.png",
-                "title": "STUFFED STRAWBERRY",
-                "especializacao": "Nefrologia e Urologia Veterinária"
-            },
-            {
-                "id": "vet5",
-                "image": "/lunch1.png",
-                "title": "BEEF BURGER MEAL",
-                "especializacao": "Oftalmologia Veterinária"
-            },
-            {
-                "id": "vet6",
-                "image": "/dinner4.png",
-                "title": "MUSSELS SOUP",
-                "especializacao": "Oncologia Veterinária"
-            },
-            {
-                "id": "vet7",
-                "image": "/dinner5.png",
-                "title": "ITALIAN SPAGHETTI",
-                "especializacao": "Oftalmologia Veterinária"
-            },
-            {
-                "id": "vet8",
-                "image": "/dinner6.png",
-                "title": "GRILLED FISH",
-                "especializacao": "Oftalmologia Veterinária"
-            }
-        ],
-        
+          ],
         "time": [
             {
                 "id": 1,
-                "image": "./membro_grupo_1.png",
+                "image": "/membro_grupo_1.png",
                 "name": "LÁYSLA MARIA",
                 "designation": "Vice-Líder"
             },
             {
                 "id": 2,
-                "image": "./membro_grupo_2.png",
+                "image": "/membro_grupo_2.png",
                 "name": "RAQUEL ARAUJO",
                 "designation": "Coordenadora do Projeto"
             },
             {
                 "id": 3,
-                "image": "./membro_grupo_3.png",
+                "image": "/membro_grupo_3.png",
                 "name": "NAIRA NATASHA",
                 "designation": "Assistente Técnica"
             },
             {
                 "id": 4,
-                "image": "./membro_grupo_4.png",
+                "image": "/membro_grupo_4.png",
                 "name": "BRUNA MAYUMI",
                 "designation": "Líder - Desenvolvedora Principal"
-            }
-        ],
-        "testimonials": [
-            {
-                "id": 1,
-                "image": "./review1.png",
-                "description": "Morbi nulla nec dui lacus, in. Libero in pretium metus massa. Sodales dignissim vitae mauris varius faucibus. Eleifend dui, non laoreet ac luctus facilisis diam. Enim scelerisque vel at id viverra tellus.",
-                "rating": 4,
-                "userName": "Jane Cooper"
-            },
-            {
-                "id": 2,
-                "image": "./review2.png",
-                "description": "Tortor vel nunc netus pharetra enim, enim dolor mauris in. Sit nam fringilla in egestas. Libero condimentum quis in vulputate adipiscing venenatis augue. Venenatis faucibus.",
-                "rating": 4.5,
-                "userName": "Esther Howard"
-            },
-            {
-                "id": 3,
-                "image": "./review3.png",
-                "description": "Tortor vel nunc netus pharetra enim, enim dolor mauris in. Sit nam fringilla in egestas. Libero condimentum quis in vulputate adipiscing venenatis augue. Venenatis faucibus.",
-                "rating": 5,
-                "userName": "Guy Hawkins"
             }
         ],
         "who_we_are": [
             {
                 "id": 1,
-                "number": "14",
-                "title": "Restaurants"
+                "number": "13",
+                "title": "Vidas Felinas"
             },
             {
                 "id": 2,
-                "number": "20",
-                "title": "Chef In Kitchen"
+                "number": "9",
+                "title": "Mistérios dos Gatos"
             },
             {
                 "id": 3,
-                "number": "08",
-                "title": "Years Of Experience"
+                "number": "101",
+                "title": "Curiosidades"
             },
             {
                 "id": 4,
-                "number": "200",
-                "title": "Food Dishes"
+                "number": "42",
+                "title": "Gatos Famosos"
             }
         ]
     
