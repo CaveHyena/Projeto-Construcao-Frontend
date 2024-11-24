@@ -46,7 +46,7 @@ const Visita = () => {
       );
 
       if (responseVerificacao.data?.consultaId === id) {
-        toast.error("Consulta já está na sua lista.");
+        toast.error("Esta consulta já está na sua lista.");
         return;
       }
 
@@ -65,6 +65,9 @@ const Visita = () => {
           error: "Erro ao adicionar consulta.",
         }
       );
+
+      // Redirecionar para a página de sucesso
+      navigate('/marcada-com-sucesso');
     } catch (error) {
       toast.error("Erro ao marcar a consulta.");
     }
