@@ -20,7 +20,6 @@ const Entrar = () => {
       const data = new FormData(e.target);
       const formData = Object.fromEntries(data)
       login(formData.email, formData.senha).then(() => {
-        alert("Logado com sucesso")
         navigate(location.state?.from || '/')
       }).catch((err) => {
         setError(err.code);
