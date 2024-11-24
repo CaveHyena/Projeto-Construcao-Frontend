@@ -40,7 +40,7 @@ const Visita = () => {
     }
 
     try {
-      // Verificar se já está na lista
+      // VERIFICAR SE JÁ ESTÁ NA LISTA
       const responseVerificacao = await axiosSecure.get(
         `/minha-lista/exibir/${id}?email=${currentUser.email}`
       );
@@ -50,7 +50,7 @@ const Visita = () => {
         return;
       }
 
-      // Adicionar consulta à lista
+      // ADICIONAR CONSULTA À LISTA
       const data = {
         consultaId: id,
         email: currentUser.email,
@@ -66,7 +66,7 @@ const Visita = () => {
         }
       );
 
-      // Redirecionar para a página de sucesso
+      // REDIRECIONAR PARA A PÁGINA DE SUCESSO
       navigate('/marcada-com-sucesso');
     } catch (error) {
       toast.error("Erro ao marcar a consulta.");

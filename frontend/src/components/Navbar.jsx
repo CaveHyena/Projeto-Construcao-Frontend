@@ -27,17 +27,17 @@ const Navbar = () => {
   return (
     <>
       <nav className={isSticky ? "sticky" : ""}>
-        <div className="logo" onClick={()=>navigate('/')}>GATOS.O.S.</div>
+        <div className="logo" onClick={()=>{navigate('/'); scrollTo(0,0)}}>GATOS.O.S.</div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
-            <NavLink to='/' onClick={() => {setShow(false)}}>
+            <NavLink to='/' onClick={() => {setShow(false); scrollTo(0,0)}}>
               <li>PÁGINA INICIAL</li>
             </NavLink>
             <NavLink to='/consultas' onClick={() => {setShow(false); scrollTo(0,0)}}>
               <li>CONSULTAS</li>
             </NavLink>
             <NavLink to='/gatos' onClick={() => {setShow(false); scrollTo(0,0)}}>
-              <li>ADOTE</li>
+              <li>NOSSOS GATOS</li>
             </NavLink>
             <NavLink to='/veterinarios' onClick={() => {setShow(false); scrollTo(0,0)}}>
               <li>VETERINÁRIOS ASSOCIADOS</li>

@@ -65,8 +65,6 @@ const SignUp = () => {
         }
       });
   };
-  
-    
 
   return (
     <section className="usuario">
@@ -96,7 +94,13 @@ const SignUp = () => {
                 <input
                   type="password"
                   placeholder="Senha"
-                  {...register("senha", { required: "Senha é obrigatória", minLength: 6 })}
+                  {...register("senha", {
+                    required: "Senha é obrigatória",
+                    minLength: {
+                      value: 6,
+                      message: "A senha deve ter pelo menos 6 caracteres",
+                    },
+                  })}
                 />
                 <input
                   type="password"
