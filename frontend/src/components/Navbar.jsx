@@ -6,7 +6,7 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const [mostrar, setMostrar] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [usuario, setUsuario] = useState(true);
+  const [usuario, setUsuario] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
