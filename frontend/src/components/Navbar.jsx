@@ -6,7 +6,7 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const [mostrar, setMostrar] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [usuario, setUsuario] = useState(false);
+  const [usuario, setUsuario] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const Navbar = () => {
               <div className={mostrar ? "perfilDropdown mostrar" : "perfilDropdown esconder"}>
                 <p onClick={()=>{navigate('/perfil'); setShow(false); scrollTo(0,0); setMostrar(!mostrar)}}>PERFIL</p>
                 <p onClick={()=>{navigate('/dashboard'); setShow(false); scrollTo(0,0); setMostrar(!mostrar)}}>MEU PAINEL</p>
-                <p onClick={()=>setUsuario(false)}>SAIR</p>
+                <p onClick={()=>{navigate('/'); setUsuario(false)}}>SAIR</p>
               </div>
             </div>
             : <button className="loginButton" onClick={() => {navigate('/login'); setShow(false)}}>LOGIN</button>
