@@ -17,10 +17,10 @@ const GatoInfo = () => {
   }
 
   return (
-    <section>
-      <div  className='marcar-container'>
-        <img className="marcar-img" src={gato.image} alt={gato.title} />
-        <div className='marcar-info'>
+    <section className='gato-detelhes-section'>
+      <div className="gato-detalhes-container">
+        <img className="gato-detalhes-imagem" src={gato.image} alt={gato.title} />
+        <div className="gato-detalhes-info">
           <h1>{gato.title}</h1>
           <p><strong>Descrição:</strong> {gato.caracteristica}</p>
           <h2>Informações do Abrigo</h2>

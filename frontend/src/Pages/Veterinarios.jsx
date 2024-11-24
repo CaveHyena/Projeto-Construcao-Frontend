@@ -18,7 +18,7 @@ const Veterinarios = () => {
       <section className='gatos' id='gatos'>
         <div className="container">
             <div className="heading_section">
-                <h1 className="heading">VETERINARIOS ASSOCIADOS</h1>
+                <h1 className="heading">VETERINÁRIOS ASSOCIADOS</h1>
                 <p>Conheça Nossos Veterinários Associados</p>
             </div>
             <div className='veterinario-info'>

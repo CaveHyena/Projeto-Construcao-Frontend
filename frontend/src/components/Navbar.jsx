@@ -6,7 +6,7 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const [mostrar, setMostrar] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [usuario, setUsuario] = useState(true);
+  const [usuario, setUsuario] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -30,17 +30,17 @@ const Navbar = () => {
         <div className="logo" onClick={()=>navigate('/')}>GATOS.O.S.</div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
-            <NavLink to='/' onClick={() => {setShow(false); scrollTo(0,0)}}>
+            <NavLink to='/' onClick={() => {setShow(false)}}>
               <li>PÁGINA INICIAL</li>
             </NavLink>
             <NavLink to='/consultas' onClick={() => {setShow(false); scrollTo(0,0)}}>
-              <li>CONSULTAS VETERINÁRIAS</li>
+              <li>CONSULTAS</li>
             </NavLink>
             <NavLink to='/gatos' onClick={() => {setShow(false); scrollTo(0,0)}}>
               <li>ADOTE</li>
             </NavLink>
             <NavLink to='/veterinarios' onClick={() => {setShow(false); scrollTo(0,0)}}>
-              <li>VETERINARIOS ASSOCIADOS</li>
+              <li>VETERINÁRIOS ASSOCIADOS</li>
             </NavLink>
           </div>
           {

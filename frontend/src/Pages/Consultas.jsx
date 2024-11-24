@@ -19,7 +19,7 @@ const Consultas = () => {
       <section className='gatos' id='gatos'>
         <div className="container">
             <div className="heading_section">
-                <h1 className="heading">CONSULTAS VETERINÁRIAS</h1>
+                <h1 className="heading">CONSULTAS DISPONÍVEIS</h1>
                 <p>Cuidados Veterinários Personalizados para Seu Pet</p>
             </div>
             <div className="gatos_container">
