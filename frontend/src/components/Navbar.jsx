@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <>
       <nav className={isSticky ? "sticky" : ""}>
-        <div className="logo" onClick={()=>{navigate('/'); scrollTo(0,0)}}>GATOS.O.S.</div>
+        <div className="logo" onClick={()=>{navigate('/'); scrollTo(0,0); setShow(false)}}>GATOS.O.S.</div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
             <NavLink to='/' onClick={() => {setShow(false)}}>
