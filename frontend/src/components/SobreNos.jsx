@@ -22,7 +22,7 @@ const SobreNos = () => {
               Mais do que aliviar um pouco nosso fardo, 
               queremos que cada um desses gatos encontre alguém que possa dar a devida atenção que eles merecem.
             </p>
-            <Link to={"/gatos"}>
+            <Link to={"/gatos"} onClick={() => {scrollTo(0,0)}}>
               Explore Nossos Gatos{" "}
               <span>
                 <HiOutlineArrowRight />
