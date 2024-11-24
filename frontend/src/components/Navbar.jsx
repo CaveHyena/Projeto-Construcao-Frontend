@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="logo" onClick={()=>{navigate('/'); scrollTo(0,0)}}>GATOS.O.S.</div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
-            <NavLink to='/' onClick={() => {setShow(false); scrollTo(0,0)}}>
+            <NavLink to='/' onClick={() => {setShow(false)}}>
               <li>PÁGINA INICIAL</li>
             </NavLink>
             <NavLink to='/consultas' onClick={() => {setShow(false); scrollTo(0,0)}}>
