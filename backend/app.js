@@ -8,7 +8,7 @@ import veterinariosRouter from "./routes/veterinariosRoute.js";
 import consultasRouter from "./routes/consultasRoute.js";
 import minhaListaRouter from "./routes/minhaListaRoute.js";
 import pagamentoRouter from "./routes/pagamentoRoute.js";
-import agendamentoRouter from "./routes/agendamentoRoute.js"
+import agendamentoRouter from "./routes/agendamentoRoute.js";
 
 dotenv.config({ path: "./config/config.env" });
 
